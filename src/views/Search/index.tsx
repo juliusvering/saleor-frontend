@@ -145,7 +145,7 @@ export const SearchView: React.SFC<SearchViewProps> = ({
                           displayLoader={loading}
                           filters={filters}
                           hasNextPage={data.products.pageInfo.hasNextPage}
-                          notFoundPhrase="No results found, please double check your typing or use another phrase"
+                          notFoundPhrase="Keine Resultate gefunden"
                           onLoadMore={handleLoadMore}
                           onOrder={updateQueryString}
                           products={data.products.edges.map(edge => edge.node)}
@@ -153,7 +153,7 @@ export const SearchView: React.SFC<SearchViewProps> = ({
                         />
                       )}
                       {!hasProducts && (
-                        <ProductsFeatured title="You might like" />
+                        <ProductsFeatured title="Könnte Dir auch gefallen" />
                       )}
                     </SearchPage>
                   );

@@ -9,8 +9,8 @@ import "./scss/index.scss";
 const PasswordResetForm: React.SFC = () => (
   <div className="password-reset-form">
     <p>
-      Please provide us your email address so we can share you a link to reset
-      your password
+      Bitte gib Deine E-Mail-Adresse ein, damit wir Dir einen Link zum zurücksetzen
+      Deines Passworts zuschicken können
     </p>
     <Mutation mutation={PASSWORD_RESET_MUTATION}>
       {(passwordReset, { loading, data }) => {
@@ -31,13 +31,13 @@ const PasswordResetForm: React.SFC = () => (
             <TextField
               name="email"
               autoComplete="email"
-              label="Email Address"
+              label="E-Mail"
               type="email"
               required
             />
             <div className="password-reset-form__button">
               <Button type="submit" {...loading && { disabled: true }}>
-                {loading ? "Loading" : "Reset password"}
+                {loading ? "Lädt" : "Passwort zurücksetzen"}
               </Button>
             </div>
           </Form>

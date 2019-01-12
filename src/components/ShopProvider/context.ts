@@ -5,13 +5,13 @@ import { ShopInterface } from "../../core/types";
 export const ShopContext = createContext<ShopInterface>({
   countries: [],
   defaultCountry: {
-    code: "US",
-    country: "United States of America"
+    code: "CH",
+    country: "Schweiz"
   },
   geolocalization: {
     country: {
-      code: "US",
-      country: "United States of America"
+      code: "CH",
+      country: "Schweiz"
     }
   }
 });

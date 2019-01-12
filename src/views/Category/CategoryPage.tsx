@@ -87,7 +87,7 @@ export const CategoryPage: React.SFC<CategoryPageProps> = ({
           totalCount={products.totalCount}
         />
       )}
-      {!hasProducts && <ProductsFeatured title="You might like" />}
+      {!hasProducts && <ProductsFeatured title="Könnte Dir auch gefallen " />}
     </div>
   );
 };

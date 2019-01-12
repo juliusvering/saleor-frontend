@@ -33,7 +33,7 @@ const CartPage: React.SFC<RouteComponentProps<{ token }>> = ({
 }) => {
   return (
     <div className="container cart-page">
-      <h1 className="checkout__header cart-page__header">Shopping cart</h1>
+      <h1 className="checkout__header cart-page__header">Warenkorb</h1>
       <Query
         query={GET_CHECKOUT}
         variables={{ token }}
@@ -50,11 +50,11 @@ const CartPage: React.SFC<RouteComponentProps<{ token }>> = ({
                   <table className="cart-page__table">
                     <thead>
                       <tr>
-                        <th>Products</th>
+                        <th>Artikel</th>
                         <Media query={{ minWidth: smallScreen }}>
                           {matches => (matches ? <th>Price</th> : null)}
                         </Media>
-                        <th>Quantity</th>
+                        <th>Anzahl</th>
                         <th>
                           <Media query={{ minWidth: smallScreen }}>
                             {matches => (matches ? "Total Price" : "Price")}
@@ -128,13 +128,13 @@ const CartPage: React.SFC<RouteComponentProps<{ token }>> = ({
                           <ApolloConsumer>
                             {client => (
                               <GoToCheckout apolloClient={client}>
-                                Checkout{" "}
+                                Bezahlen{" "}
                               </GoToCheckout>
                             )}
                           </ApolloConsumer>
                         ) : (
                           <Link to={checkoutLoginUrl}>
-                            <Button>Checkout</Button>
+                            <Button>Bezahlen</Button>
                           </Link>
                         )
                       }

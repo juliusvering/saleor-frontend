@@ -37,7 +37,7 @@ const Breadcrumbs: React.SFC<{
   return (
     <ul className="breadcrumbs">
       <li>
-        <Link to={baseUrl}>Home</Link>
+        <Link to={baseUrl}>Start</Link>
       </li>
       {breadcrumbs.map(breadcrumb => (
         <li key={breadcrumb.value}>

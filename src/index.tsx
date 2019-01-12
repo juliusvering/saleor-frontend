@@ -72,12 +72,12 @@ const startApp = async () => {
                 apolloClient={apolloClient}
                 onUserLogin={() =>
                   show(OverlayType.message, null, {
-                    title: "You are logged in"
+                    title: "Du bist eingeloggt"
                   })
                 }
                 onUserLogout={() =>
                   show(OverlayType.message, null, {
-                    title: "You are logged out"
+                    title: "Du bist ausgeloggt"
                   })
                 }
                 refreshUser

@@ -23,20 +23,20 @@ class CheckoutReview extends React.Component<RouteComponentProps<{ id }>, {}> {
           <div className="checkout-review">
             <div className="checkout__step">
               <span>5</span>
-              <h4 className="checkout__header">Review your order</h4>
+              <h4 className="checkout__header">Prüfe Deine Bestellung</h4>
             </div>
             <div className="checkout-review__content">
               <table className="cart__table">
                 <thead>
                   <tr>
-                    <th>Products</th>
+                    <th>Artikel</th>
                     <Media query={{ minWidth: smallScreen }}>
-                      {matches => (matches ? <th>Price</th> : null)}
+                      {matches => (matches ? <th>Preis</th> : null)}
                     </Media>
-                    <th>Quantity</th>
+                    <th>Anzahl</th>
                     <th>
                       <Media query={{ minWidth: smallScreen }}>
-                        {matches => (matches ? "Total Price" : "Price")}
+                        {matches => (matches ? "Summe" : "Preis")}
                       </Media>
                     </th>
                     <th />
@@ -86,7 +86,7 @@ class CheckoutReview extends React.Component<RouteComponentProps<{ id }>, {}> {
                     <td />
                   </tr>
                   <tr>
-                    <td className="cart__table__subtotal">Delivery cost</td>
+                    <td className="cart__table__subtotal">Versandkosten</td>
                     <Media query={{ minWidth: smallScreen }}>
                       {matches => (matches ? <td /> : null)}
                     </Media>
@@ -95,7 +95,7 @@ class CheckoutReview extends React.Component<RouteComponentProps<{ id }>, {}> {
                     <td />
                   </tr>
                   <tr>
-                    <td className="cart__table__subtotal">Total Cost</td>
+                    <td className="cart__table__subtotal">Summe</td>
                     <Media query={{ minWidth: smallScreen }}>
                       {matches => (matches ? <td /> : null)}
                     </Media>
@@ -107,22 +107,22 @@ class CheckoutReview extends React.Component<RouteComponentProps<{ id }>, {}> {
               </table>
               <div className="checkout-review__content__summary">
                 <div>
-                  <h4>Shipping address</h4>
+                  <h4>Versandadresse</h4>
                   <AddressSummary
                     address={checkout.shippingAddress}
                     email={checkout.email}
                   />
                 </div>
                 <div>
-                  <h4>Billing address</h4>
+                  <h4>Rechnungsadresse</h4>
                   <AddressSummary address={checkout.billingAddress} />
                 </div>
                 <div>
-                  <h4>Shipping method</h4>
+                  <h4>Versandart</h4>
                   {checkout.shippingMethod.name}
                 </div>
                 <div>
-                  <h4>Payment method</h4>
+                  <h4>Zahlungsmethode</h4>
                   Ending in {cardData.lastDigits}
                 </div>
               </div>
@@ -136,7 +136,7 @@ class CheckoutReview extends React.Component<RouteComponentProps<{ id }>, {}> {
                             clearCheckout();
                             show(OverlayType.message, null, {
                               status: "error",
-                              title: "Your order was placed"
+                              title: "Bestellung erfolgreich!"
                             });
                             localStorage.removeItem("checkout");
                             localStorage.removeItem("cart");
@@ -160,7 +160,7 @@ class CheckoutReview extends React.Component<RouteComponentProps<{ id }>, {}> {
                               })
                             }
                           >
-                            {loading ? "Loading" : "Place your order"}
+                            {loading ? "Lädt" : "Bestellen!"}
                           </Button>
                         );
                       }}

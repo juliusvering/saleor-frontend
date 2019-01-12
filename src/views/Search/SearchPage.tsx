@@ -20,7 +20,7 @@ export const SearchPage: React.SFC<SearchPageProps> = ({
         <div className="search-page__header">
           <div className="search-page__header__input container">
             <TextField
-              label="Search term:"
+              label="Suche: "
               value={query}
               onChange={onQueryChange}
             />

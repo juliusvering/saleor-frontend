@@ -43,12 +43,12 @@ const HomePage: React.SFC = () => (
                 <div className="home-page__hero-text">
                   <div>
                     <span className="home-page__hero__title">
-                      <h1>Final reduction</h1>
+                      <h1>Wilkommen</h1>
                     </span>
                   </div>
                   <div>
                     <span className="home-page__hero__title">
-                      <h1>Up to 70% off sale</h1>
+                      <h1>bei Händlr</h1>
                     </span>
                   </div>
                 </div>
@@ -62,7 +62,7 @@ const HomePage: React.SFC = () => (
                         data.categories.edges[0].node.name
                       )}
                     >
-                      <Button>Shop sale</Button>
+                      <Button id="shopNowButton">Los geht's!</Button>
                     </Link>
                   )}
                 </div>
@@ -70,7 +70,7 @@ const HomePage: React.SFC = () => (
               <ProductsFeatured />
               <div className="home-page__categories">
                 <div className="container">
-                  <h3>Shop by category</h3>
+                  <h3>Nach Kategorien einkaufen</h3>
                   <div className="home-page__categories__list">
                     {data.categories.edges.map(({ node: category }) => (
                       <div key={category.id}>

@@ -101,7 +101,7 @@ class CheckoutPayment extends React.Component<
                       <Link to={checkoutBaseUrl(token)}>
                         <div className="checkout__step checkout__step--inactive">
                           <span>1</span>
-                          <h4 className="checkout__header">Shipping Address</h4>
+                          <h4 className="checkout__header">Versandadresse</h4>
                         </div>
                       </Link>
                       <div className="checkout__content">
@@ -113,7 +113,7 @@ class CheckoutPayment extends React.Component<
                       <Link to={checkoutShippingOptionsUrl(token)}>
                         <div className="checkout__step checkout__step--inactive">
                           <span>2</span>
-                          <h4 className="checkout__header">Shipping Method</h4>
+                          <h4 className="checkout__header">Zahlungsmethode</h4>
                         </div>
                       </Link>
                       <div className="checkout__content">
@@ -126,7 +126,7 @@ class CheckoutPayment extends React.Component<
                       <Link to={checkoutBillingUrl(token)}>
                         <div className="checkout__step checkout__step--inactive">
                           <span>3</span>
-                          <h4 className="checkout__header">Billing Address</h4>
+                          <h4 className="checkout__header">Rechnungsadresse</h4>
                         </div>
                       </Link>
                       <div className="checkout__content">
@@ -134,7 +134,7 @@ class CheckoutPayment extends React.Component<
                       </div>
                       <div className="checkout__step">
                         <span>4</span>
-                        <h4 className="checkout__header">Payment Method</h4>
+                        <h4 className="checkout__header">Zahlungsmethode</h4>
                       </div>
                       <div className="checkout__content">
                         <Mutation mutation={PAYMENT_METHOD_CREATE}>
@@ -200,7 +200,7 @@ class CheckoutPayment extends React.Component<
                                   }
                                 }}
                               >
-                                <span className="input__label">Number</span>
+                                <span className="input__label">Nummer</span>
                                 <div
                                   className={
                                     this.state.errors.number
@@ -281,8 +281,8 @@ class CheckoutPayment extends React.Component<
                                 </div>
                                 <Button disabled={this.state.loading}>
                                   {this.state.loading
-                                    ? "Loading"
-                                    : "Continue to review your order"}
+                                    ? "Lädt"
+                                    : "Check Deinen Einkauf"}
                                 </Button>
                               </Form>
                             );

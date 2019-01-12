@@ -1,4 +1,8 @@
 @import "../../App/scss/variables.scss";
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+
+
 
 .home-page {
   &__hero {
@@ -31,10 +35,9 @@
     &__title {
       background-color: $white;
       display: inline-block;
-      transform: skew(45deg);
+
       padding: $spacer $spacer * 3;
       margin-bottom: $spacer / 2;
-
       @media (max-width: $small-screen) {
         padding: 0.6rem $spacer;
         width: calc(100% - 4rem);
@@ -42,12 +45,11 @@
 
       h1 {
         display: inline-block;
-        transform: skew(-45deg);
         font-weight: $bold-font-weight;
-        text-transform: uppercase;
-        color: $blue;
+        color: $base-font-color;
         font-size: $h1-font-size;
         font-weight: 900;
+        font-family: 'Merriweather', serif;
 
         @media (max-width: $small-screen) {
           font-size: $h4-font-size;
@@ -56,6 +58,8 @@
         @media (min-width: $small-screen) and (max-width: $medium-screen) {
           font-size: 48px;
         }
+
+
       }
     }
   }

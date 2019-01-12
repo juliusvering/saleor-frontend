@@ -218,7 +218,7 @@ class ProductDescription extends React.Component<
           ) : null}
           <TextField
             type="number"
-            label="Quantity"
+            label="Anzahl"
             value={quantity || ""}
             onChange={e => this.setState({ quantity: Number(e.target.value) })}
           />
@@ -244,7 +244,7 @@ class ProductDescription extends React.Component<
                   )
                 }
               >
-                Add to basket
+                Zum Warenkorb hinzufügen
               </AddToCartButton>
             );
           }}

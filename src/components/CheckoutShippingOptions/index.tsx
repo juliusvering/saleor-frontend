@@ -28,7 +28,7 @@ class CheckoutShipping extends React.Component<
                 <Link to={checkoutBaseUrl(checkout.token)}>
                   <div className="checkout__step checkout__step--inactive">
                     <span>1</span>
-                    <h4 className="checkout__header">Shipping Address</h4>
+                    <h4 className="checkout__header">Versandadresse</h4>
                   </div>
                 </Link>
                 <div className="checkout__content">
@@ -39,7 +39,7 @@ class CheckoutShipping extends React.Component<
                 </div>
                 <div className="checkout__step">
                   <span>2</span>
-                  <h4 className="checkout__header">Shipping Method</h4>
+                  <h4 className="checkout__header">Versandart</h4>
                 </div>
                 <Mutation mutation={UPDATE_CHECKOUT_SHIPPING_OPTION}>
                   {(updateCheckoutShippingOptions, { data, loading }) => {
@@ -96,7 +96,7 @@ class CheckoutShipping extends React.Component<
                           }}
                           disabled={loading}
                         >
-                          {loading ? "Loading" : "Continue to billing"}
+                          {loading ? "Lädt" : "Weiter zur Rechnungsadresse"}
                         </Button>
                       </div>
                     );
@@ -104,11 +104,11 @@ class CheckoutShipping extends React.Component<
                 </Mutation>
                 <div className="checkout__step">
                   <span>3</span>
-                  <h4 className="checkout__header">Billing</h4>
+                  <h4 className="checkout__header">Rechnungsadresse</h4>
                 </div>
                 <div className="checkout__step">
                   <span>4</span>
-                  <h4 className="checkout__header">Payment Method</h4>
+                  <h4 className="checkout__header">Zahlungsmethode</h4>
                 </div>
               </>
             );

@@ -9,7 +9,7 @@ interface NotFoundProps {
 export const NotFound: React.SFC<NotFoundProps> = ({ message }) => (
   <div className="not-found-page">
     <h2 className="not-found-page__header">
-      {message || "Sorry, we couldn't find the page you're looking for :("}
+      {message || "Hoppala, diese Seite konnten wir nicht finden :("}
     </h2>
   </div>
 );

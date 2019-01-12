@@ -98,7 +98,7 @@ const MainMenu: React.SFC = () => (
                           }
                           content={
                             <ul className="main-menu__dropdown">
-                              <li onClick={logout}>Log Out</li>
+                              <li onClick={logout}>Ausloggen</li>
                             </ul>
                           }
                         />
@@ -154,7 +154,7 @@ const MainMenu: React.SFC = () => (
             >
               <Media
                 query={{ minWidth: mediumScreen }}
-                render={() => <span>Search</span>}
+                render={() => <span>Suche</span>}
               />
               <ReactSVG path={searchIcon} />
             </li>

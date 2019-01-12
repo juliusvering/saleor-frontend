@@ -41,20 +41,20 @@ const RegisterForm: React.SFC = () => (
               <TextField
                 name="email"
                 autoComplete="email"
-                label="Email Address"
+                label="E-Mail"
                 type="email"
                 required
               />
               <TextField
                 name="password"
                 autoComplete="password"
-                label="Password"
+                label="Passwort"
                 type="password"
                 required
               />
               <div className="login__content__button">
                 <Button type="submit" {...loading && { disabled: true }}>
-                  {loading ? "Loading" : "Register"}
+                  {loading ? "Lädt" : "Registrieren"}
                 </Button>
               </div>
             </Form>
@@ -103,7 +103,7 @@ export class LoginOverlay extends React.Component<
                         this.state.active === "login" ? "active-tab" : ""
                       }
                     >
-                      Sign in to account
+                      Einloggen
                     </span>
                     <span
                       onClick={() => this.changeActiveTab("register")}
@@ -111,7 +111,7 @@ export class LoginOverlay extends React.Component<
                         this.state.active === "register" ? "active-tab" : ""
                       }
                     >
-                      Register new account
+                      Registrieren
                     </span>
                   </div>
                   <div className="login__content">
@@ -120,7 +120,7 @@ export class LoginOverlay extends React.Component<
                         <LoginForm />
                         <div className="login__content__password-reminder">
                           <p>
-                            Have you forgotten your password?&nbsp;
+                            Passwort vergessen?&nbsp;
                             <span
                               onClick={() =>
                                 overlay.show(
@@ -129,7 +129,7 @@ export class LoginOverlay extends React.Component<
                                 )
                               }
                             >
-                              Click Here
+                              Hier klicken!
                             </span>
                           </p>
                         </div>

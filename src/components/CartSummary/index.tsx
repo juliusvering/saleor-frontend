@@ -12,7 +12,7 @@ const CartSummary: React.SFC = () => (
     {({ checkout }) =>
       checkout ? (
         <div className="cart-summary">
-          <p className="cart-summary__header">Cart summary</p>
+          <p className="cart-summary__header">Warenkorb</p>
           {checkout.lines.map(product => (
             <div key={product.id} className="cart-summary__product-item">
               <img
@@ -38,7 +38,7 @@ const CartSummary: React.SFC = () => (
             <h4>{checkout.subtotalPrice.gross.localized}</h4>
           </div>
           <div className="cart-summary__totals">
-            <h4>Delivery</h4>
+            <h4>Lieferung</h4>
             <h4>
               {checkout.shippingPrice
                 ? checkout.shippingPrice.gross.localized
@@ -46,7 +46,7 @@ const CartSummary: React.SFC = () => (
             </h4>
           </div>
           <div className="cart-summary__totals last">
-            <h4>Grand total</h4>
+            <h4>Summe</h4>
             <h4>
               {checkout.totalPrice ? checkout.totalPrice.gross.localized : "-"}
             </h4>

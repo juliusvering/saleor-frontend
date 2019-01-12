@@ -59,9 +59,9 @@ export const CartOverlay: React.SFC = () => (
                             className="overlay__header__cart-icon"
                           />
                           <div className="overlay__header-text">
-                            My bag,{" "}
+                            Warenkorb,{" "}
                             <span className="overlay__header-text-items">
-                              {lines.length || 0} items
+                              {lines.length || 0} Artikel
                             </span>
                           </div>
                           <ReactSVG
@@ -128,7 +128,7 @@ export const CartOverlay: React.SFC = () => (
                                   cart={cart}
                                   secondary
                                 >
-                                  My bag
+                                  Warenkorb
                                 </GoToCart>
                               </div>
                               <div className="cart__footer__button">
@@ -139,11 +139,11 @@ export const CartOverlay: React.SFC = () => (
                                         apolloClient={client}
                                         cart={cart}
                                       >
-                                        Checkout
+                                        Bezahlen
                                       </GoToCheckout>
                                     ) : (
                                       <Link to={checkoutLoginUrl}>
-                                        <Button>Checkout</Button>
+                                        <Button>Bezahlen</Button>
                                       </Link>
                                     )
                                   }
@@ -153,14 +153,14 @@ export const CartOverlay: React.SFC = () => (
                           </>
                         ) : (
                           <div className="cart__empty">
-                            <h4>Yor bag is empty</h4>
+                            <h4>Dein Warenkorb ist leer</h4>
                             <p>
-                              You haven’t added anything to your bag. We’re sure
-                              you’ll find something in our store
+                              Du hast noch nichts zu Deinem Warenkorb hinzugefügt.
+                              Du findest sicher etwas in unserem Angebot!
                             </p>
                             <div className="cart__empty__action">
                               <Button secondary onClick={() => overlay.hide()}>
-                                Continue Shopping
+                                Weiter einkaufen
                               </Button>
                             </div>
                           </div>

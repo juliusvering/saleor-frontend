@@ -53,9 +53,9 @@ class PriceRangeFilter extends React.Component<
     if (!!from && !!to) {
       return from + " - " + to;
     } else if (!!from) {
-      return "from " + from;
+      return "von " + from;
     } else if (!!to) {
-      return "to " + to;
+      return "bis " + to;
     } else {
       return undefined;
     }
@@ -75,7 +75,7 @@ class PriceRangeFilter extends React.Component<
         onClick={this.handleClick}
       >
         <SelectField
-          placeholder="Price range"
+          placeholder="Preisbereich"
           menuIsOpen={false}
           components={{ Control }}
           value={
@@ -94,13 +94,13 @@ class PriceRangeFilter extends React.Component<
         >
           <TextField
             type="number"
-            placeholder="From"
+            placeholder="Von"
             onChange={event => onChange("priceGte", event.target.value as any)}
             value={getValueOrEmpty(from)}
           />
           <TextField
             type="number"
-            placeholder="To"
+            placeholder="Bis"
             onChange={event => onChange("priceLte", event.target.value as any)}
             value={getValueOrEmpty(to)}
           />

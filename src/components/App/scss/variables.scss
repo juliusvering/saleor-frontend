@@ -1,20 +1,20 @@
 // colors
 $base-font-color: #323232;
-$turquoise-dark: #55c4b3;
+$turquoise-dark: #005662;
 $turquoise-light: #f1f5f5;
-$turquoise: #51e9d2;
-$blue: #21125e;
-$blue-dark: #190c4e;
+$turquoise: #00838f;
+$blue: #00838f;
+$blue-dark: #005662;
 $rose: #c22d74;
 $green: #3ed256;
 $gray: #7d7d7d;
 $gray-light: #f6f6f6;
 $gray-dark: #7d7d7d;
 $white: #ffffff;
-$blue-overlay: rgba($blue, 0.8);
+$blue-overlay: rgba($white, 0.99);
 
 // typography
-$base-font-family: "montserrat";
+$base-font-family: 'Lato', serif;
 $base-font-size: 1rem; // 16px
 $small-font-size: 0.875rem; // 14px
 $base-line-height: 1.25rem; // 20px
@@ -39,9 +39,9 @@ $button-box-shadow-clicked: -3px 3px 14px 0px rgba(0, 0, 0, 0.2);
 $button-padding: 0.9rem 3.7rem;
 $button-padding-small-screen: 0.9rem 1rem;
 $button-transition: 0.3s;
-$button-transform: skew(45deg);
-$button-content-transform: skew(-45deg);
-$button-text-transform: uppercase;
+$button-transform: skew(0deg);
+$button-content-transform: skew(0deg);
+$button-text-transform: none;
 $button-font-weight: $bold-font-weight;
 
 // input

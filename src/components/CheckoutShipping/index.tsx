@@ -25,7 +25,7 @@ class CheckoutShipping extends React.Component<
             <>
               <div className="checkout__step">
                 <span>1</span>
-                <h4 className="checkout__header">Shipping Address</h4>
+                <h4 className="checkout__header">Versandadresse</h4>
               </div>
 
               <Mutation mutation={UPDATE_CHECKOUT_SHIPPING_ADDRESS}>
@@ -67,7 +67,7 @@ class CheckoutShipping extends React.Component<
                                     email: checkout.email
                                   }
                             }
-                            buttonText="Continue to Shipping"
+                            buttonText="Weiter zum Versand"
                             errors={
                               data && data.checkoutShippingAddressUpdate.errors
                             }
@@ -106,15 +106,15 @@ class CheckoutShipping extends React.Component<
               </Mutation>
               <div className="checkout__step">
                 <span>2</span>
-                <h4 className="checkout__header">Shipping Method</h4>
+                <h4 className="checkout__header">Versandart</h4>
               </div>
               <div className="checkout__step">
                 <span>3</span>
-                <h4 className="checkout__header">Billing</h4>
+                <h4 className="checkout__header">Rechnungsadresse</h4>
               </div>
               <div className="checkout__step">
                 <span>4</span>
-                <h4 className="checkout__header">Payment Method</h4>
+                <h4 className="checkout__header">Zahlungsmethode</h4>
               </div>
             </>
           )}

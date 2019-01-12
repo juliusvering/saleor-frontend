@@ -32,10 +32,10 @@ export const ProductList: React.SFC<ProductsListProps> = ({
   totalCount
 }) => {
   const filterOptions = [
-    { value: "price", label: "Price Low-High" },
-    { value: "-price", label: "Price High-Low" },
-    { value: "name", label: "Name Increasing" },
-    { value: "-name", label: "Name Decreasing" }
+    { value: "price", label: "Preis aufsteigend" },
+    { value: "-price", label: "Preis absteigend" },
+    { value: "name", label: "Name aufsteigend" },
+    { value: "-name", label: "Name absteigend" }
   ];
   const sortValues = filterOptions.find(
     option => option.value === filters.sortBy
@@ -47,7 +47,7 @@ export const ProductList: React.SFC<ProductsListProps> = ({
       <div className="products-list__products container">
         <div className="products-list__products__subheader">
           <span className="products-list__products__subheader__total">
-            {totalCount} Products
+            {totalCount} Artikel
           </span>
           {displayLoader && (
             <div className="products-list__loader">
@@ -86,7 +86,7 @@ export const ProductList: React.SFC<ProductsListProps> = ({
               ) : (
                 hasNextPage && (
                   <Button secondary onClick={onLoadMore}>
-                    Load more products
+                    Mehr Artikel laden
                   </Button>
                 )
               )}
@@ -103,7 +103,7 @@ export const ProductList: React.SFC<ProductsListProps> = ({
 };
 
 ProductList.defaultProps = {
-  notFoundPhrase: "We couldn't find any product matching these conditions"
+  notFoundPhrase: "Wir konnten keine Artikel finden, die diese Bedingungen erfüllen"
 };
 
 export default ProductList;

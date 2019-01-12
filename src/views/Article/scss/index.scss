@@ -23,12 +23,12 @@
     &__title {
       background-color: $white;
       display: inline-block;
-      transform: skew(45deg);
+      transform: skew(0deg);
       padding: 1.5vw 9vw;
 
       h1 {
         display: inline-block;
-        transform: skew(-45deg);
+        transform: skew(0deg);
         font-weight: $bold-font-weight;
         text-transform: uppercase;
         color: $blue;

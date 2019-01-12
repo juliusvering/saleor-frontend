@@ -14,13 +14,13 @@ export default class ShopProvider extends React.Component<
     this.state = {
       countries: [],
       defaultCountry: {
-        code: "US",
-        country: "United States of America"
+        code: "CH",
+        country: "Schweiz"
       },
       geolocalization: {
         country: {
-          code: "US",
-          country: "United States of America"
+          code: "CH",
+          country: "Schweiz"
         }
       }
     };

@@ -19,20 +19,20 @@ const LoginForm: React.SFC<{}> = () => (
           <TextField
             name="email"
             autoComplete="email"
-            label="Email Address"
+            label="E-Mail"
             type="email"
             required
           />
           <TextField
             name="password"
             autoComplete="password"
-            label="Password"
+            label="Passwort"
             type="password"
             required
           />
           <div className="login-form__button">
             <Button type="submit" {...loading && { disabled: true }}>
-              {loading ? "Loading" : "Sign in"}
+              {loading ? "Lädt" : "Anmelden"}
             </Button>
           </div>
         </Form>

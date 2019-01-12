@@ -96,7 +96,7 @@ export const Page: React.SFC<PageProps> = ({
           totalCount={products.totalCount}
         />
       )}
-      {!hasProducts && <ProductsFeatured title="You might like" />}
+      {!hasProducts && <ProductsFeatured title="Könnte Dir auch gefallen " />}
     </div>
   );
 };

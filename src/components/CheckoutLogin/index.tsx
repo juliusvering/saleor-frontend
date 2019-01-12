@@ -33,11 +33,12 @@ class CheckoutLogin extends React.Component<
               <Online>
                 <div className="checkout-login">
                   <div className="checkout-login__guest">
-                    <h3 className="checkout__header">Continue as a guest</h3>
+                    <h3 className="checkout__header">Als Gast fortfahren</h3>
                     <p>
-                      If you don’t want to register you account at our store
-                      don’t worry. You can finish your checkout as a guest.
-                      You’ll be treated just as good as a registered user.
+                      Wenn Du Dich nicht bei uns registrieren möchtest, kannst
+                      Du Deinen Einkauf auch als Gast abschliessen. Wir werden Dich
+                      genau so gut behandeln wie als registrierter Kunde.
+
                     </p>
                     <CartContext.Consumer>
                       {cart => (
@@ -48,7 +49,7 @@ class CheckoutLogin extends React.Component<
                               cart={cart}
                               ref={node => (this.checkoutButton = node)}
                             >
-                              Continue as a guest
+                              Als Gast fortfahren
                             </GoToCheckout>
                           )}
                         </ApolloConsumer>
@@ -56,7 +57,7 @@ class CheckoutLogin extends React.Component<
                     </CartContext.Consumer>
                   </div>
                   <div className="checkout-login__user">
-                    <h3 className="checkout__header">Registered user</h3>
+                    <h3 className="checkout__header">Registrierter Kunde</h3>
 
                     {this.state.resetPassword ? (
                       <>
@@ -68,7 +69,7 @@ class CheckoutLogin extends React.Component<
                                 this.setState({ resetPassword: false });
                               }}
                             >
-                              Back to login
+                              Zurück zum Login
                             </span>
                           </p>
                         </div>
@@ -78,13 +79,13 @@ class CheckoutLogin extends React.Component<
                         <LoginForm />
                         <div className="login__content__password-reminder">
                           <p>
-                            Have you forgotten your password?&nbsp;
+                            Passwort vergessen?&nbsp;
                             <span
                               onClick={() => {
                                 this.setState({ resetPassword: true });
                               }}
                             >
-                              Click Here
+                              Hier klicken!
                             </span>
                           </p>
                         </div>

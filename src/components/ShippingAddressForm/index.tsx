@@ -25,7 +25,7 @@ const ShippingAddressForm: React.SFC<{
         <Form errors={errors} onSubmit={onSubmit} data={data}>
           {!billing ? (
             <TextField
-              label="Email Address"
+              label="E-Mail"
               type="email"
               autoComplete="email"
               name="email"
@@ -33,45 +33,45 @@ const ShippingAddressForm: React.SFC<{
           ) : null}
           <div className="address-form__grid">
             <TextField
-              label="First Name"
+              label="Vorname"
               type="given-name"
               name="firstName"
               autoComplete="given-name"
             />
             <TextField
-              label="Last Name"
+              label="Nachname"
               type="family-name"
               name="lastName"
               autoComplete="family-name"
             />
           </div>
           <TextField
-            label="Company"
+            label="Firma"
             type="organization"
             name="companyName"
             autoComplete="organization"
           />
           <TextField
-            label="Street Line 1"
+            label="Adresse Zeile 1"
             type="address-line1"
             name="streetAddress1"
             autoComplete="address-line1"
           />
           <TextField
-            label="Street Line 2"
+            label="Adresse Zeile 2"
             type="address-line2"
             name="streetAddress2"
             autoComplete="address-line2"
           />
           <div className="address-form__grid">
             <TextField
-              label="City"
+              label="Ort"
               type="city"
               name="city"
               autoComplete="city"
             />
             <TextField
-              label="State/Province"
+              label="Bundesland/Kanton"
               type="state"
               name="countryArea"
               autoComplete="state"
@@ -79,13 +79,13 @@ const ShippingAddressForm: React.SFC<{
           </div>
           <div className="address-form__grid">
             <TextField
-              label="Zip-Code"
+              label="Postleitzahl"
               type="postal-code"
               name="postalCode"
               autoComplete="postal-code"
             />
             <SelectField
-              label="Country"
+              label="Land"
               name="country"
               options={countries.map(country => ({
                 label: country.country,
@@ -96,18 +96,18 @@ const ShippingAddressForm: React.SFC<{
           {!billing ? (
             <>
               <TextField
-                label="Phone number"
+                label="Telefonnummer"
                 type="tel"
                 name="phone"
                 autoComplete="phone-number"
               />
               <label className="checkbox">
                 <input name="asBilling" type="checkbox" />
-                <span>Use as Billing Address</span>
+                <span>Als Rechnungsadresse verwenden</span>
               </label>
             </>
           ) : null}
-          <Button disabled={loading}>{loading ? "Loading" : buttonText}</Button>
+          <Button disabled={loading}>{loading ? "Lädt" : buttonText}</Button>
         </Form>
       )}
     </ShopContext.Consumer>

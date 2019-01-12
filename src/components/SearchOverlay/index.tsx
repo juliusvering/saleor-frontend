@@ -148,7 +148,7 @@ class SearchOverlay extends React.Component<{}, { search: string }> {
                                           search: `?q=${this.state.search}`
                                         }}
                                       >
-                                        <Button>Show all results</Button>
+                                        <Button>Alle Resultate anzeigen</Button>
                                       </Link>
                                     )}
                                   </div>

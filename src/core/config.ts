@@ -9,7 +9,7 @@ export enum PROVIDERS {
 
 export const STATIC_PAGES = [
   {
-    label: "About",
+    label: "Über",
     url: generatePageUrl("about")
   }
 ];

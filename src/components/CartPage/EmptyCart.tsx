@@ -6,14 +6,14 @@ import Button from "../Button";
 
 export const EmptyCart: React.SFC<{}> = () => (
   <div className="cart-page__empty">
-    <h4>Yor bag is empty</h4>
+    <h4>Dein Warenkorb ist leer</h4>
     <p>
-      You haven’t added anything to your bag. We’re sure you’ll find something
-      in our store
+      Du hast noch nichts zu Deinem Warenkorb hinzugefügt.
+      Du findest sicher etwas in unserem Angebot!
     </p>
     <div className="cart-page__empty__action">
       <Link to={baseUrl}>
-        <Button secondary>Continue Shopping</Button>
+        <Button secondary>Weiter einkaufen</Button>
       </Link>
     </div>
   </div>
